@@ -1,0 +1,63 @@
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .green-border {
+    border: 2px solid green;
+    color: green;
+    background-color: white;
+  }
+  
+  .grey-border {
+    border: 2px solid grey;
+    color: grey;
+    background-color: white;
+  }
+  
+  .seat:hover,
+  .seat.clicked {
+    background-color: green;
+    color: white;
+  }
+  /* Seat.css */
+/* ... (previous styles) */
+
+.grey-border:first-child,
+.grey-border:nth-child(2) {
+  border: 2px solid rgb(128, 128, 128);
+  color: grey;
+  background-color: white;
+}
+
+.no-hover {
+  pointer-events: none;
+
+}
+
+
+.row:first-child .seat {
+    border: 2px solid grey;
+    color: grey;
+  }
+  
+  .row:first-child .seat:nth-child(1),
+  .row:first-child .seat:nth-child(2) {
+    background-color: rgb(94, 94, 94);
+  }

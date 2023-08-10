@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import SeatRow from './SeatRow';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SeatRow seatCount={5} isFirstRow={true} isGreenBorder={true} />
+      <SeatRow seatCount={2} isGreenBorder={true} />
+      <SeatRow seatCount={5} isGreenBorder={true} />
     </div>
   );
 }
 
 export default App;
+
+
+// import React from 'react';
+// import './App.css';
+// import SeatRow from './SeatRow';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <SeatRow seatCount={5} isGreenBorder={true} isGreyBorder={false} />
+//       <SeatRow seatCount={2} isGreenBorder={true} isGreyBorder={false} />
+//       <SeatRow seatCount={5} isGreenBorder={true} isGreyBorder={false} />
+//     </div>
+//   );
+// }
+
+// export default App;
